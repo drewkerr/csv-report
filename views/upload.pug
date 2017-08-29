@@ -1,0 +1,11 @@
+extends index.pug
+
+block content
+  if error
+    aside(role="alert") #{error}
+  form(method="post" action="/" enctype="multipart/form-data")
+    label
+      p Choose a <abbr>CSV</abbr> file
+      p ...or drag it here
+      input(type="file" name="csv" onchange="this.form.submit()")
+  footer by Andrew Kerr

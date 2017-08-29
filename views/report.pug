@@ -1,0 +1,17 @@
+extends index.pug
+
+block content
+  - var SubjectName, TaskName, StudentCode
+  each record in report
+    - if (SubjectName != record.SubjectName)
+      h1 #{record.SubjectName} (#{record.TeacherImportIdentifier})
+    - if (TaskName != record.TaskName)
+      h2= record.TaskName
+    - if (StudentCode != record.StudentCode)
+      h3 #{record.StudentLastName}, #{record.StudentFirstName} (#{record.StudentCode})
+    p
+      b #{record.ComponentName}: 
+      = record.Result
+    - StudentCode = record.StudentCode
+    - TaskName = record.TaskName
+    - SubjectName = record.SubjectName
