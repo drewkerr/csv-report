@@ -1,1 +1,1 @@
-# csv-report
+Convert a CSV file into styled HTML

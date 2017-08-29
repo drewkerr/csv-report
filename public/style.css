@@ -1,0 +1,116 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2 {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+}
+
+h1 {
+  top: 0;
+  margin: 1em 0;
+}
+
+h2 {
+  top: 2em;
+  margin: 3em 0 1em;
+}
+
+h3 {
+  margin: 1em 2em;
+}
+
+p {
+  margin: 1em 4em;
+}
+
+aside[role="alert"] {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  font-size: 500%;
+  text-align: center;
+  z-index: 10;
+  color: #f33;
+  animation: fadeout 5s;
+  opacity: 0;
+}
+
+@keyframes fadeout {
+    0%   { opacity: 0; font-size: 1%; }
+    8%   { opacity: 1; font-size: 120%; }
+    10%  { font-size: 100%; }
+    80%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+abbr {
+  position: relative;
+  margin: 0.25em;
+  padding: 40px 5px 10px;
+  font-weight: bold;
+  font-size: 50%;
+  letter-spacing: 2px;
+  border: solid 5px black;
+}
+
+abbr:after {
+  content: '';
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -5px;
+  right: -5px;
+  border: solid 10px black;
+  border-top-color: white;
+  border-right-color: white;
+}
+
+input[type="file"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 80vh;
+  width: 100%;
+}
+
+label {
+  height: 80vh;
+  padding: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 250%;
+  text-align: center;
+	cursor: pointer;
+  outline: 5px dashed black;
+  outline-offset: -20px;
+}
+
+label p {
+  margin: 0.5em;
+}
+
+label:hover {
+  outline-color: #06c;
+}
+
+footer {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media print {
+  h1, h2 {
+    position: relative;
+    margin: 1em 0;
+  }
+}
