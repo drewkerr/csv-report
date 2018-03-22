@@ -32,8 +32,10 @@ aside[role="alert"] {
   top: 25px;
   left: 0;
   width: 100%;
-  font-size: 500%;
+  font-size: 200%;
+  font-weight: bold;
   text-align: center;
+  text-transform: uppercase;
   z-index: 10;
   color: #f33;
   animation: fadeout 5s;
@@ -106,11 +108,28 @@ footer {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  opacity: 0.25;
 }
 
 @media print {
-  h1, h2 {
+  body {
+    font-size: small;
+  }
+  h1 {
+    display: none;
+  }
+  h2 {
+    top: 0;
     position: relative;
     margin: 1em 0;
+  }
+  h3 {
+    margin: 1em 0;
+  }
+  p {
+    margin: 1em;
+  }
+  .student {
+    page-break-inside: avoid;
   }
 }

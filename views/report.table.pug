@@ -1,0 +1,23 @@
+extends index.pug
+
+block content
+  h1 Report Proofing
+  - var TaskName
+  - for (var t = 1; t < report[0].length; t++)
+    - TaskName = report[0][t]
+    h2= report[0][t]
+    table
+      thead
+        th
+          td= report[1][0]
+          - var a = 1
+          - while (TaskName == report[0][t+a])
+            td= report[1][a]
+            - a++
+      tbody
+      - for (var s = 2; s < (report.length - 5); s++)
+        tr
+          td= report[s][0]
+          - for (var c = 0; c < a; c++)
+            td= report[s][t+c]
+      - t = t+a-1
