@@ -48,6 +48,7 @@ app.post('/', upload.single('csv'), function (request, response) {
     })
 
     parser.on('end', function(){
+      console.log(report)
       response.render('report', { title: 'Report Proofing', report: report })
       //response.json(report)
     })
