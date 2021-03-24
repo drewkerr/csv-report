@@ -27,6 +27,63 @@ p {
   margin: 1em 4em;
 }
 
+.button {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  border: black 2px solid;
+}
+
+.button:hover {
+  background-color: #eee;
+}
+
+@keyframes focus {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+.focus {
+  animation: focus 0.5s;
+  display: inline-block;
+}
+
+.focus.spelling {
+  color: white;
+  background-color: red;
+}
+
+.focus.grammar {
+  color: white;
+  background-color: green;
+}
+
+.focus.suggestion {
+  color: white;
+  background-color: blue;
+}
+
+.spelling {
+  background-color: #fcc;
+  border-bottom: 2px solid red;
+}
+
+.grammar {
+  background-color: #cfc;
+  border-bottom: 2px solid green;
+}
+
+.suggestion {
+  background-color: #ccf;
+  border-bottom: 2px solid blue;
+}
+
 aside[role="alert"] {
   position: absolute;
   top: 25px;
@@ -115,7 +172,7 @@ footer {
   body {
     font-size: small;
   }
-  h1 {
+  h1, .button {
     display: none;
   }
   h2 {

@@ -13,7 +13,10 @@ block content
       .student
         h3= report[s][0]
         - for (var c = 0; c < a; c++)
-          p
-            b #{report[1][t+c]}: 
-            = report[s][t+c]
+          if (report[1][t+c] == 'Comment (Open)')
+            p.comment= report[s][t+c]
+          else
+            p
+              b #{report[1][t+c]}: 
+              = report[s][t+c]
     - t = t+a-1
